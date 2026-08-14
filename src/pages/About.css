@@ -1,0 +1,275 @@
+/* About Page Styles */
+
+.about {
+  width: 100%;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  padding: 4rem 1.5rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  color: #c9d1d9;
+  margin: 0 0 1rem 0;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #8b949e;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* Main Content */
+.about-content {
+  padding: 4rem 1.5rem;
+  background-color: #0d1117;
+  border-bottom: 1px solid #30363d;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.about-card h2 {
+  font-size: 1.4rem;
+  color: #58a6ff;
+  margin: 0 0 1rem 0;
+}
+
+.about-card p {
+  color: #8b949e;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.interests-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interests-list li {
+  color: #8b949e;
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.interests-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 4rem 1.5rem;
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #c9d1d9;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.skills-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  color: #58a6ff;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  color: #c9d1d9;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.skill-item::before {
+  content: "✓";
+  color: #238636;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 4rem 1.5rem;
+  background-color: #0d1117;
+  border-bottom: 1px solid #30363d;
+}
+
+.experience-section h2 {
+  font-size: 2rem;
+  color: #c9d1d9;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.experience-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 10px 25px rgba(88, 166, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+  font-size: 1.2rem;
+  color: #c9d1d9;
+  margin: 0 0 1rem 0;
+}
+
+.highlight-card p {
+  color: #8b949e;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-matrix {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .skills-section,
+  .experience-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .skills-section h2,
+  .experience-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .skills-matrix,
+  .experience-highlights {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 2rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-intro {
+    font-size: 0.95rem;
+  }
+
+  .about-content,
+  .skills-section,
+  .experience-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+  }
+
+  .skills-matrix,
+  .experience-highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+}

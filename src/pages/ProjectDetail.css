@@ -1,0 +1,363 @@
+/* Project Detail Page Styles */
+
+.project-detail {
+  width: 100%;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header Section */
+.detail-header {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  padding: 2rem 1.5rem 4rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.back-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #79c0ff;
+}
+
+.detail-header h1 {
+  font-size: 2.5rem;
+  color: #c9d1d9;
+  margin: 0 0 0.5rem 0;
+}
+
+.detail-tagline {
+  font-size: 1.2rem;
+  color: #58a6ff;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Main Content */
+.detail-content {
+  padding: 4rem 1.5rem;
+  background-color: #0d1117;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+}
+
+.detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Detail Sections */
+.detail-section {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.detail-section h2 {
+  font-size: 1.5rem;
+  color: #c9d1d9;
+  margin: 0 0 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.detail-section h3 {
+  font-size: 1.1rem;
+  color: #58a6ff;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.detail-section p {
+  color: #8b949e;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.detail-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Components List */
+.components-list,
+.implementation-list,
+.choices-list,
+.challenges-list,
+.contributions-list,
+.learnings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.components-list li,
+.implementation-list li,
+.choices-list li,
+.challenges-list li,
+.contributions-list li,
+.learnings-list li {
+  color: #8b949e;
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.components-list li::before,
+.implementation-list li::before,
+.challenges-list li::before,
+.contributions-list li::before,
+.learnings-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.choices-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #238636;
+  font-weight: bold;
+}
+
+/* Architecture Components */
+.architecture-components {
+  margin-bottom: 2rem;
+}
+
+.architecture-components h3 {
+  margin-top: 0;
+}
+
+/* Data Flow */
+.data-flow {
+  margin-top: 2rem;
+}
+
+.flow-diagram {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  color: #79c0ff;
+  font-size: 0.95rem;
+  margin: 1rem 0 0 0;
+  overflow-x: auto;
+}
+
+/* Sidebar */
+.detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.sidebar-card h3 {
+  font-size: 1rem;
+  color: #58a6ff;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #30363d;
+}
+
+/* Tech Cloud */
+.tech-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  display: inline-block;
+}
+
+/* Links List */
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resource-link {
+  color: #58a6ff;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.resource-link:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  color: #79c0ff;
+}
+
+.link-icon {
+  display: inline-block;
+  width: 1.2rem;
+}
+
+/* Not Found */
+.not-found {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+.not-found h1 {
+  font-size: 2rem;
+  color: #c9d1d9;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: #8b949e;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .detail-sidebar {
+    position: static;
+  }
+
+  .sidebar-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .detail-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .detail-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .detail-main {
+    gap: 2rem;
+  }
+
+  .detail-section {
+    padding: 1.5rem;
+  }
+
+  .detail-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .tech-cloud {
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-header {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .detail-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .detail-tagline {
+    font-size: 1rem;
+  }
+
+  .detail-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .detail-main {
+    gap: 1.5rem;
+  }
+
+  .detail-section {
+    padding: 1.25rem;
+  }
+
+  .detail-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .detail-section h3 {
+    font-size: 1rem;
+  }
+
+  .sidebar-card {
+    padding: 1rem;
+  }
+
+  .sidebar-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .components-list li,
+  .implementation-list li,
+  .choices-list li,
+  .challenges-list li,
+  .contributions-list li,
+  .learnings-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .flow-diagram {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
