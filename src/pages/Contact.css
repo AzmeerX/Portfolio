@@ -7,7 +7,7 @@
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  min-width: 0;
 }
 
 /* Hero Section */
@@ -125,6 +125,7 @@
 
 .card-content {
   flex: 1;
+  min-width: 0;
 }
 
 .card-content h3 {
@@ -138,6 +139,7 @@
   font-weight: 600;
   margin: 0 0 0.75rem 0;
   font-size: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .card-link {
@@ -324,3 +326,5 @@
     margin-bottom: 1.5rem;
   }
 }
+
+.interests li::before { content: "\2192"; }

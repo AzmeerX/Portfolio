@@ -273,3 +273,7 @@
     padding: 1.5rem;
   }
 }
+
+/* Unicode escapes render consistently regardless of the source-file encoding. */
+.interests-list li::before { content: "\2192"; }
+.skill-item::before { content: "\2713"; }

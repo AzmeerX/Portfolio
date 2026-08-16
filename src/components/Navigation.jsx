@@ -26,13 +26,14 @@ function Navigation() {
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
+          aria-controls="primary-navigation"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <ul className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
+        <ul id="primary-navigation" className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
           <li className="nav-item">
             <Link to="/" className="nav-link" onClick={closeMenu}>
               Home
