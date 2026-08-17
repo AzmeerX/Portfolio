@@ -15,6 +15,10 @@ function Contact() {
     const { name, value } = event.target
     setFormData((current) => ({ ...current, [name]: value }))
     setErrors((current) => ({ ...current, [name]: '' }))
+    if (status !== 'submitting') {
+      setStatus('idle')
+      setStatusMessage('')
+    }
   }
 
   function validate() {
@@ -83,10 +87,10 @@ function Contact() {
     <section className="contact-cta"><div className="contact-container"><div className="cta-box">
       <h2>Send a Message</h2><p>Use the form below and I&apos;ll receive your message by email.</p>
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
-        <div className="form-field"><label htmlFor="contact-name">Name</label><input id="contact-name" name="name" type="text" value={formData.name} onChange={updateField} autoComplete="name" aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? 'contact-name-error' : undefined} disabled={status === 'submitting'} />{errors.name && <p id="contact-name-error" className="field-error">{errors.name}</p>}</div>
-        <div className="form-field"><label htmlFor="contact-email">Email</label><input id="contact-email" name="email" type="email" value={formData.email} onChange={updateField} autoComplete="email" inputMode="email" aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? 'contact-email-error' : undefined} disabled={status === 'submitting'} />{errors.email && <p id="contact-email-error" className="field-error">{errors.email}</p>}</div>
-        <div className="form-field"><label htmlFor="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" value={formData.message} onChange={updateField} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'contact-message-error' : undefined} disabled={status === 'submitting'} />{errors.message && <p id="contact-message-error" className="field-error">{errors.message}</p>}</div>
-        {status !== 'idle' && <p className={`form-status ${status}`} role="status" aria-live="polite">{statusMessage}</p>}
+        <div className="form-field"><label htmlFor="contact-name">Name</label><input id="contact-name" name="name" type="text" value={formData.name} onChange={updateField} autoComplete="name" maxLength="100" required aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? 'contact-name-error' : undefined} disabled={status === 'submitting'} />{errors.name && <p id="contact-name-error" className="field-error">{errors.name}</p>}</div>
+        <div className="form-field"><label htmlFor="contact-email">Email</label><input id="contact-email" name="email" type="email" value={formData.email} onChange={updateField} autoComplete="email" inputMode="email" maxLength="254" required aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? 'contact-email-error' : undefined} disabled={status === 'submitting'} />{errors.email && <p id="contact-email-error" className="field-error">{errors.email}</p>}</div>
+        <div className="form-field"><label htmlFor="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" value={formData.message} onChange={updateField} maxLength="5000" required aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'contact-message-error' : undefined} disabled={status === 'submitting'} />{errors.message && <p id="contact-message-error" className="field-error">{errors.message}</p>}</div>
+        {status !== 'idle' && <p className={`form-status ${status}`} role={status === 'error' ? 'alert' : 'status'} aria-live="polite">{statusMessage}</p>}
         <button type="submit" className="btn btn-primary form-submit" disabled={status === 'submitting'}>{status === 'submitting' ? 'Sending…' : 'Send Message'}</button>
       </form>
     </div></div></section>
